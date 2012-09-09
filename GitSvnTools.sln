@@ -3,18 +3,24 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{9344bdbb-3e7f-41fc-a0dd-8665d75ee146}") = "Source", "Source\Source.mdproj", "{86C23016-1811-4AF6-9423-8AB00FE02A04}"
 EndProject
+Project("{9344bdbb-3e7f-41fc-a0dd-8665d75ee146}") = "Test", "Test\Test.mdproj", "{4F8B2714-3AE1-4DBF-8902-794A8069B6D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F8B2714-3AE1-4DBF-8902-794A8069B6D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F8B2714-3AE1-4DBF-8902-794A8069B6D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F8B2714-3AE1-4DBF-8902-794A8069B6D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F8B2714-3AE1-4DBF-8902-794A8069B6D0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{86C23016-1811-4AF6-9423-8AB00FE02A04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{86C23016-1811-4AF6-9423-8AB00FE02A04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86C23016-1811-4AF6-9423-8AB00FE02A04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86C23016-1811-4AF6-9423-8AB00FE02A04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Source\Source.mdproj
+		StartupItem = Test\Test.mdproj
 	EndGlobalSection
 EndGlobal

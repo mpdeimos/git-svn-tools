@@ -6,8 +6,8 @@ namespace GitSvnTools.Git
 		/** The repository root. */
 		public string root {get; private set;}
 		
-		public Internal internal {get; private set;}
-		public Svn svn {get; private set;}
+		public InternalFacet internal {get; private set;}
+		public SvnFacet svn {get; private set;}
 		
 		/** Constructs a GitRepository for the current working directory (or parent directories). */
 		public Repository() throws Error
@@ -30,8 +30,8 @@ namespace GitSvnTools.Git
 				throw new Error.INVALID_REPOSITORY(this.root + " is no valid repository");
 			}
 			
-			this.internal = new Internal(this);
-			this.svn = new Svn(this);
+			this.internal = new InternalFacet(this);
+			this.svn = new SvnFacet(this);
 		}
 		
 		/** Returns the repository root of the current directory or any parent directory. Null if no repository is found. */

@@ -6,16 +6,14 @@
     <ItemType>ValaProject</ItemType>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{86C23016-1811-4AF6-9423-8AB00FE02A04}</ProjectGuid>
+    <ProjectGuid>{4F8B2714-3AE1-4DBF-8902-794A8069B6D0}</ProjectGuid>
     <compiler>
       <compiler />
     </compiler>
     <Packages>
       <Packages>
         <ProjectPackage file="/usr/share/vala-0.14/vapi//glib-2.0.vapi" name="glib-2.0" IsProject="false" />
-        <ProjectPackage file="/usr/share/vala/gee-1.0.vapi" name="gee-1.0" IsProject="false" />
         <ProjectPackage file="/usr/share/vala-0.14/vapi/gio-2.0.vapi" name="gio-2.0" IsProject="false" />
-        <ProjectPackage file="/usr/share/vala-0.14/vapi/posix.vapi" name="posix" IsProject="false" />
       </Packages>
     </Packages>
   </PropertyGroup>
@@ -27,11 +25,12 @@
     </CodeGeneration>
     <SourceDirectory>.</SourceDirectory>
     <Output>
-      <Output output="git-svn-tools" />
+      <Output output="test" />
     </Output>
     <Build>
       <Build target="Bin" />
     </Build>
+    <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release</OutputPath>
@@ -40,30 +39,22 @@
     </CodeGeneration>
     <SourceDirectory>.</SourceDirectory>
     <Output>
-      <Output output="git-svn-sync" />
+      <Output output="tt" />
     </Output>
     <Build>
       <Build target="Bin" />
     </Build>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Main.vala" />
-    <Compile Include="Error.vala" />
-    <Compile Include="Util\Strings.vala" />
-    <Compile Include="Git\Repository.vala" />
-    <Compile Include="Process\Executor.vala" />
-    <Compile Include="Process\Result.vala" />
-    <Compile Include="Util\Files.vala" />
-    <Compile Include="Git\RepositoryFacet.vala" />
-    <Compile Include="Git\InternalFacet.vala" />
-    <Compile Include="Git\SvnFacet.vala" />
-    <Compile Include="Git\SvnExternal.vala" />
-    <Compile Include="Command\Externals.vala" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Util\" />
-    <Folder Include="Git\" />
-    <Folder Include="Process\" />
-    <Folder Include="Command\" />
+    <Compile Include="main.vala" />
+    <Compile Include="Test.vala" />
+    <Compile Include="Util\FilesTest.vala" />
+    <Compile Include="..\Source\Util\Strings.vala">
+      <Link>Util\Strings.vala</Link>
+    </Compile>
+    <Compile Include="..\Source\Util\Files.vala">
+      <Link>Util\Files.vala</Link>
+    </Compile>
+    <Compile Include="Util\StringsTest.vala" />
   </ItemGroup>
 </Project>

@@ -1,9 +1,9 @@
 namespace GitSvnTools.Git
 {
-	public class Internal: RepositoryFacette
+	public class InternalFacet: RepositoryFacet
 	{
 		/** Constructor. */
-		internal Internal(Repository repository)
+		internal InternalFacet(Repository repository)
 		{
 			base(repository);
 		}

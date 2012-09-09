@@ -1,17 +1,17 @@
 namespace GitSvnTools.Git
 {
-	public class Svn: RepositoryFacette
+	public class SvnFacet: RepositoryFacet
 	{
 		/** Constructor. */
-		internal Svn(Repository repository)
+		internal SvnFacet(Repository repository)
 		{
 			base(repository);
 		}
 		
 		/** Returns the externals as map in form of path -> target */
-		public Gee.Map<string, string> get_externals() throws Error
+		public SvnExternal[] get_externals() throws Error
 		{
-			var externals = new Gee.HashMap<string, string>();
+			SvnExternal[] externals = {};
 			string[] raw = Util.Strings.split_lines(raw_show_externals());
 			
 			string anchor = "/";
@@ -40,9 +40,7 @@ namespace GitSvnTools.Git
 					throw new Error.MALFORMED_EXTERNAL("Malformed external " + line);
 				}
 				
-				var source = chunks[0];
-				var target = anchor + chunks[1];
-				externals.set(target, source);
+				externals += new SvnExternal(this.repository, anchor, chunks[1], chunks[0]);
 			}
 			
 			return externals;
